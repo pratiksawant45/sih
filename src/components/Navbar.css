@@ -1,0 +1,70 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar ul li a {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #1e3a8a; /* Deep blue */
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar ul li a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #f9d423; /* Contrast underline hover color */
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::before {
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  color: #f9d423; /* Contrast hover color */
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
